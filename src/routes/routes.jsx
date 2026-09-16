@@ -7,6 +7,7 @@ import Contact from "../page/contact/Contact";
 import NotFound from "../page/NotFound";
 import Project from "../page/project/Projects";
 import Skill from "../page/skill/Skill";
+import Achievement from "../page/achievment/Achievement";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "skills",
         element: <Skill />,
+      },
+      {
+        path: "achievements",
+        element: <Achievement />,
       },
     ],
   },

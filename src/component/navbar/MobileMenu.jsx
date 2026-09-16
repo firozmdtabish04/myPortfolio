@@ -7,8 +7,9 @@ import {
   Info,
   Phone,
   Briefcase,
-  FolderKanban,
   Code2,
+  FolderKanban,
+  Trophy,
 } from "lucide-react";
 import { FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa";
 function MobileMenu({ isOpen, setIsOpen }) {
@@ -19,6 +20,7 @@ function MobileMenu({ isOpen, setIsOpen }) {
     { name: "About", to: "/about", icon: Info },
     { name: "Skills", to: "/skills", icon: Code2 },
     { name: "Projects", to: "/projects", icon: FolderKanban },
+    { name: "Achievement", to: "/achievements", icon: Trophy },
     { name: "Contact", to: "/contact", icon: Phone },
     { name: "Service", to: "/service", icon: Briefcase },
   ];
