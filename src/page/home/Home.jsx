@@ -102,10 +102,12 @@ function Home() {
               </a>
 
               <a
-                href="mailto:tabish@example.com"
-                className="group w-12 h-12 rounded-full bg-white border shadow-md flex items-center justify-center hover:bg-red-500 hover:-translate-y-1 transition-all duration-300"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=mdtabishfiroz04@gmail.com&su=Portfolio%20Inquiry&body=Hi%20Tabish,"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 px-7 py-3 rounded-full border border-red-300 text-red-500 font-semibold hover:bg-red-50 hover:scale-105 transition-all duration-300"
               >
-                <FaEnvelope className="text-red-500 group-hover:text-white text-xl" />
+                <FaEnvelope />
               </a>
             </div>
           </div>

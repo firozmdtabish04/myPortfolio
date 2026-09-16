@@ -62,7 +62,7 @@ function About() {
 
               <div className="w-72 h-72 rounded-full overflow-hidden border-[8px] border-white shadow-2xl relative md:w-96 md:h-96">
                 <img
-                  src="/profile.png"
+                  src="/src/assets/profile.jpg"
                   alt="Tabish Firoz"
                   className="w-full h-full object-cover"
                 />
