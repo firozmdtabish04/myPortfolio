@@ -40,7 +40,7 @@ function Footer() {
           {/* Social Icons */}
           <div className="gap-4 justify-center flex md:justify-end">
             <a
-              href="https://github.com/your_username"
+              href="https://github.com/firozmdtabish04"
               target="_blank"
               rel="noreferrer"
               className="hover:text-red-400 transition"
@@ -48,7 +48,7 @@ function Footer() {
               <FaGithub size={22} />
             </a>
             <a
-              href="https://linkedin.com/in/your_username"
+              href="https://www.linkedin.com/in/tabish-firoz/"
               target="_blank"
               rel="noreferrer"
               className="hover:text-red-400 transition"
@@ -56,7 +56,7 @@ function Footer() {
               <FaLinkedinIn size={22} />
             </a>
             <a
-              href="https://instagram.com/your_username"
+              href="https://www.instagram.com/firozmdtabish/"
               target="_blank"
               rel="noreferrer"
               className="hover:text-red-400 transition"

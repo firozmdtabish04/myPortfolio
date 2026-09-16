@@ -71,7 +71,7 @@ function Navbar() {
 
           <div className="gap-2 flex items-center lg:gap-3">
             <a
-              href="https://instagram.com/your_username"
+              href="https://www.instagram.com/firozmdtabish/"
               target="_blank"
               rel="noopener noreferrer"
               className="h-11 w-11 justify-center rounded-full border border-pink-200 bg-pink-50 group flex items-center transition-all duration-300 hover:-translate-y-1 hover:bg-pink-500 hover:shadow-lg"
@@ -83,7 +83,7 @@ function Navbar() {
             </a>
 
             <a
-              href="https://linkedin.com/in/your_username"
+              href="https://www.linkedin.com/in/tabish-firoz/"
               target="_blank"
               rel="noopener noreferrer"
               className="h-11 w-11 justify-center rounded-full border border-blue-200 bg-blue-50 group flex items-center transition-all duration-300 hover:-translate-y-1 hover:bg-blue-600 hover:shadow-lg"
@@ -95,7 +95,7 @@ function Navbar() {
             </a>
 
             <a
-              href="https://github.com/your_username"
+              href="https://github.com/firozmdtabish04"
               target="_blank"
               rel="noopener noreferrer"
               className="h-11 w-11 justify-center rounded-full border border-gray-300 bg-gray-100 group flex items-center transition-all duration-300 hover:-translate-y-1 hover:bg-gray-900 hover:shadow-lg"

@@ -53,7 +53,7 @@ function Home() {
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mt-10">
               <a
-                href="/Tabish-Firoz-Resume.pdf"
+                href="/src/assets/Tabish Firoz (Dev).pdf"
                 download
                 className="flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-red-500 text-white font-semibold hover:bg-red-600 hover:scale-105 shadow-lg transition-all duration-300"
               >
@@ -62,7 +62,9 @@ function Home() {
               </a>
 
               <a
-                href="mailto:tabish@example.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=mdtabishfiroz04@gmail.com&su=Portfolio%20Inquiry&body=Hi%20Tabish,"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 px-7 py-3 rounded-full border border-red-300 text-red-500 font-semibold hover:bg-red-50 hover:scale-105 transition-all duration-300"
               >
                 <FaEnvelope />
@@ -73,7 +75,7 @@ function Home() {
             {/* Social Icons */}
             <div className="flex justify-center lg:justify-start gap-4 mt-10">
               <a
-                href="https://github.com/your_username"
+                href="https://github.com/firozmdtabish04"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group w-12 h-12 rounded-full bg-white border shadow-md flex items-center justify-center hover:bg-gray-900 hover:-translate-y-1 transition-all duration-300"
@@ -82,7 +84,7 @@ function Home() {
               </a>
 
               <a
-                href="https://linkedin.com/in/your_username"
+                href="https://www.linkedin.com/in/tabish-firoz/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group w-12 h-12 rounded-full bg-white border shadow-md flex items-center justify-center hover:bg-blue-600 hover:-translate-y-1 transition-all duration-300"
@@ -91,7 +93,7 @@ function Home() {
               </a>
 
               <a
-                href="https://instagram.com/your_username"
+                href="https://www.instagram.com/firozmdtabish/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group w-12 h-12 rounded-full bg-white border shadow-md flex items-center justify-center hover:bg-pink-500 hover:-translate-y-1 transition-all duration-300"
@@ -117,9 +119,9 @@ function Home() {
               {/* Image */}
               <div className="relative rounded-full overflow-hidden border-[8px] border-white shadow-2xl w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[420px] lg:h-[420px]">
                 <img
-                  src="/profile.png"
+                  src="/src/assets/profile.jpg"
                   alt="Tabish Firoz"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
               </div>
 

@@ -66,7 +66,7 @@ function Contact() {
 
               <div className="flex-wrap gap-4 flex">
                 <a
-                  href="https://github.com/your_username"
+                  href="https://github.com/firozmdtabish04"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="h-12 w-12 justify-center rounded-full border bg-white shadow-md group flex items-center hover:-translate-y-1 hover:bg-gray-900 transition-all duration-300"
@@ -75,7 +75,7 @@ function Contact() {
                 </a>
 
                 <a
-                  href="https://linkedin.com/in/your_username"
+                  href="https://www.linkedin.com/in/tabish-firoz/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="h-12 w-12 justify-center rounded-full border bg-white shadow-md group flex items-center hover:-translate-y-1 hover:bg-blue-600 transition-all duration-300"
@@ -84,7 +84,7 @@ function Contact() {
                 </a>
 
                 <a
-                  href="https://instagram.com/your_username"
+                  href="https://www.instagram.com/firozmdtabish/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="h-12 w-12 justify-center rounded-full border bg-white shadow-md group flex items-center hover:-translate-y-1 hover:bg-pink-500 transition-all duration-300"
