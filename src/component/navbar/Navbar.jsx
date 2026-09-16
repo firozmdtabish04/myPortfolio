@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import {
   Menu,
   X,
@@ -46,24 +46,48 @@ function Navbar() {
 
               return (
                 <li key={item.name}>
-                  <Link
+                  <NavLink
                     to={item.to}
-                    className="flex-col justify-center w-20 h-20 overflow-hidden group relative flex items-center lg:w-24"
+                    className={({ isActive }) =>
+                      `group relative flex flex-col items-center justify-center w-20 lg:w-24 h-20 overflow-hidden transition-all duration-300 ${
+                        isActive ? "text-red-500" : "text-gray-700"
+                      }`
+                    }
                   >
-                    {/* Animated Top Line */}
-                    <span className="top-0 h-1 w-full bg-red-500 absolute left-0 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
+                    {({ isActive }) => (
+                      <>
+                        {/* Top Line */}
+                        <span
+                          className={`absolute top-0 left-0 h-1 w-full bg-red-500 origin-left transition-transform duration-300 ${
+                            isActive
+                              ? "scale-x-100"
+                              : "scale-x-0 group-hover:scale-x-100"
+                          }`}
+                        />
 
-                    {/* Icon */}
-                    <Icon
-                      size={24}
-                      className="top-3 text-red-500 opacity-0 absolute -translate-y-8 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0"
-                    />
+                        {/* Icon */}
+                        <Icon
+                          size={24}
+                          className={`absolute top-3 transition-all duration-300 ${
+                            isActive
+                              ? "opacity-100 translate-y-0 text-red-500"
+                              : "opacity-0 -translate-y-8 text-red-500 group-hover:opacity-100 group-hover:translate-y-0"
+                          }`}
+                        />
 
-                    {/* Text */}
-                    <span className="text-sm font-medium text-gray-700 lg:text-base transition-all duration-300 group-hover:translate-y-6 group-hover:opacity-0">
-                      {item.name}
-                    </span>
-                  </Link>
+                        {/* Text */}
+                        <span
+                          className={`text-sm lg:text-base font-medium transition-all duration-300 ${
+                            isActive
+                              ? "translate-y-6 opacity-0"
+                              : "group-hover:translate-y-6 group-hover:opacity-0"
+                          }`}
+                        >
+                          {item.name}
+                        </span>
+                      </>
+                    )}
+                  </NavLink>
                 </li>
               );
             })}

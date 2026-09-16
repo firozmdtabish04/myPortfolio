@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   Menu,
   X,
@@ -31,18 +31,21 @@ function MobileMenu({ isOpen, setIsOpen }) {
         const Icon = item.icon;
 
         return (
-          <Link
+          <NavLink
             key={item.name}
             to={item.to}
             onClick={() => setIsOpen(false)}
-            className="gap-3 px-5 py-4 border-b border-gray-100 text-gray-700 group flex items-center hover:bg-red-50 hover:text-red-500 transition-all duration-300"
+            className={({ isActive }) =>
+              `flex items-center gap-3 px-5 py-4 border-b border-gray-100 transition-all duration-300 ${
+                isActive
+                  ? "bg-red-50 text-red-500 font-semibold border-l-4 border-red-500"
+                  : "text-gray-700 hover:bg-red-50 hover:text-red-500"
+              }`
+            }
           >
-            <Icon
-              size={22}
-              className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
-            />
-            <span className="font-medium">{item.name}</span>
-          </Link>
+            <Icon size={22} />
+            <span>{item.name}</span>
+          </NavLink>
         );
       })}
 
