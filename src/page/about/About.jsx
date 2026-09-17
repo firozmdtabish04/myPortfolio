@@ -7,7 +7,7 @@ import {
   FaLaptopCode,
   FaAward,
 } from "react-icons/fa";
-
+import Profile from "../../assets/profile.jpg";
 function About() {
   const stats = [
     { value: "9.3", label: "CGPA" },
@@ -62,7 +62,7 @@ function About() {
 
               <div className="w-72 h-72 rounded-full overflow-hidden border-[8px] border-white shadow-2xl relative md:w-96 md:h-96">
                 <img
-                  src="/src/assets/profile.jpg"
+                  src={Profile}
                   alt="Tabish Firoz"
                   className="w-full h-full object-cover"
                 />
