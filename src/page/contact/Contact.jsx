@@ -186,9 +186,10 @@ function Contact() {
             <h3 className="mt-4 font-bold text-gray-900">Email</h3>
 
             <a
-              href="mailto:mdtabishfiroz04@gmail.com"
-              className="mt-2 text-gray-600 block break-all hover:text-red-500"
+              href="mailto:mdtabishfiroz04@gmail.com?subject=Portfolio%20Inquiry&body=Hi%20Tabish,"
+              className="gap-2 px-7 py-3 justify-center rounded-full border border-red-300 text-red-500 font-semibold flex items-center hover:bg-red-50 hover:scale-105 transition-all duration-300"
             >
+              <FaEnvelope />
               mdtabishfiroz04@gmail.com
             </a>
           </div>

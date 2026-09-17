@@ -6,6 +6,7 @@ import {
   FaEnvelope,
   FaDownload,
 } from "react-icons/fa";
+import resume from "../../assets/Tabish Firoz (Dev).pdf";
 import Profile from "../../assets/profile.jpg";
 function Home() {
   const skills = [
@@ -53,8 +54,8 @@ function Home() {
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mt-10">
               <a
-                href="/src/assets/Tabish Firoz (Dev).pdf"
-                download
+                href={resume}
+                download="Tabish Firoz (Resume)"
                 className="flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-red-500 text-white font-semibold hover:bg-red-600 hover:scale-105 shadow-lg transition-all duration-300"
               >
                 <FaDownload />
@@ -62,9 +63,7 @@ function Home() {
               </a>
 
               <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=mdtabishfiroz04@gmail.com&su=Portfolio%20Inquiry&body=Hi%20Tabish,"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:mdtabishfiroz04@gmail.com?subject=Portfolio%20Inquiry&body=Hi%20Tabish,"
                 className="flex items-center justify-center gap-2 px-7 py-3 rounded-full border border-red-300 text-red-500 font-semibold hover:bg-red-50 hover:scale-105 transition-all duration-300"
               >
                 <FaEnvelope />
