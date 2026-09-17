@@ -6,7 +6,7 @@ import {
   FaEnvelope,
   FaDownload,
 } from "react-icons/fa";
-
+import Profile from "../../assets/profile.jpg";
 function Home() {
   const skills = [
     "React",
@@ -121,7 +121,7 @@ function Home() {
               {/* Image */}
               <div className="relative rounded-full overflow-hidden border-[8px] border-white shadow-2xl w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[420px] lg:h-[420px]">
                 <img
-                  src="/src/assets/profile.jpg"
+                  src={Profile}
                   alt="Tabish Firoz"
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
