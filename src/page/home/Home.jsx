@@ -61,14 +61,6 @@ function Home() {
                 <FaDownload />
                 Download Resume
               </a>
-
-              <a
-                href="mailto:mdtabishfiroz04@gmail.com?subject=Portfolio%20Inquiry&body=Hi%20Tabish,"
-                className="flex items-center justify-center gap-2 px-7 py-3 rounded-full border border-red-300 text-red-500 font-semibold hover:bg-red-50 hover:scale-105 transition-all duration-300"
-              >
-                <FaEnvelope />
-                Mail Me
-              </a>
             </div>
 
             {/* Social Icons */}
