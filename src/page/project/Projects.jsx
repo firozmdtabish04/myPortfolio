@@ -44,6 +44,15 @@ const projects = [
     tech: ["React", "Spring Boot", "MySQL"],
   },
   {
+    title: "Development Resources",
+    description:
+      "A complete frontend learning platform with HTML5, CSS3, and JavaScript notes, examples, practice questions, semantic HTML, forms, accessibility, and responsive design.",
+    image: "/projects/dev-resources.jpg",
+    github: "https://github.com/firozmdtabish04",
+    demo: "https://lustrous-crostata-7a79d3.netlify.app/",
+    tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+  },
+  {
     title: "Portfolio Website",
     description:
       "Modern responsive portfolio built with React, Tailwind CSS, animations, and reusable UI components.",
