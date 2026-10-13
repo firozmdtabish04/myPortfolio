@@ -44,6 +44,15 @@ const projects = [
     tech: ["React", "Spring Boot", "MySQL"],
   },
   {
+    title: "MediFind",
+    description:
+      "Healthcare platform built with the MERN stack, featuring a responsive interface and medical store functionality.",
+    image: "/projects/medifind.jpg",
+    github: "https://github.com/firozmdtabish04/Medical-Store-MERN-",
+    demo: "https://medifind-jehna.vercel.app/",
+    tech: ["React", "Node.js", "MongoDB", "Express.js", "Tailwind CSS"],
+  },
+  {
     title: "Development Resources",
     description:
       "A complete frontend learning platform with HTML5, CSS3, and JavaScript notes, examples, practice questions, semantic HTML, forms, accessibility, and responsive design.",
