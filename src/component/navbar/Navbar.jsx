@@ -10,9 +10,11 @@ import {
   Code2,
   FolderKanban,
   Trophy,
+  Sparkles,
 } from "lucide-react";
 import { FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import MobileMenu from "./MobileMenu";
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -21,145 +23,108 @@ function Navbar() {
     { name: "About", to: "/about", icon: Info },
     { name: "Skills", to: "/skills", icon: Code2 },
     { name: "Projects", to: "/projects", icon: FolderKanban },
-    { name: "Achievement", to: "/achievements", icon: Trophy },
+    { name: "Achievements", to: "/achievements", icon: Trophy },
+    { name: "Services", to: "/service", icon: Briefcase },
     { name: "Contact", to: "/contact", icon: Phone },
-    { name: "Service", to: "/service", icon: Briefcase },
   ];
 
   return (
-    <nav className="top-0 z-50 bg-gray-100/80 border-b border-gray-200 sticky backdrop-blur-md">
-      <div className="px-3 py-3 max-w-7xl mx-auto sm:px-4 lg:px-6">
-        {/* Desktop + Tablet */}
-        <div className="px-4 justify-between bg-white rounded-2xl shadow-md h-20 hidden md:flex items-center lg:px-6">
-          {/* Logo */}
-          <Link
-            to="/"
-            className="text-2xl font-extrabold text-red-500 lg:text-3xl tracking-wide hover:scale-105 transition-transform"
-          >
-            TaFi
+    <header className="top-0 z-50 w-full sticky transition-all duration-300">
+      <div className="px-3 py-3 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        {/* Main Desktop Navbar Container */}
+        <div className="px-4 rounded-2xl border border-slate-200/90 shadow-lg h-18 justify-between glass-panel sm:px-6 flex items-center transition-all duration-300">
+          {/* Logo with Status Beacon */}
+          <Link to="/" className="gap-2.5 group flex items-center">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br justify-center text-white font-black text-xl shadow-md shadow-red-500/25 from-red-500 to-rose-600 flex items-center group-hover:scale-105 group-hover:rotate-3 transition-transform">
+              T
+            </div>
+            <div className="flex-col flex">
+              <span className="gap-1 text-xl font-black text-slate-900 sm:text-2xl tracking-tight flex items-center group-hover:text-red-500 transition-colors">
+                TaFi
+                <span className="w-1.5 h-1.5 rounded-full bg-red-500 inline-block" />
+              </span>
+              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest -mt-1 hidden sm:block">
+                Software Dev
+              </span>
+            </div>
           </Link>
 
-          {/* Menu */}
-          <ul className="flex items-center">
+          {/* Desktop Nav Items */}
+          <nav className="gap-1 p-1.5 bg-slate-100/80 rounded-2xl border border-slate-200/60 shadow-inner hidden lg:flex items-center">
             {menuItems.map((item) => {
               const Icon = item.icon;
-
               return (
-                <li key={item.name}>
-                  <NavLink
-                    to={item.to}
-                    className={({ isActive }) =>
-                      `group relative flex flex-col items-center justify-center w-20 lg:w-24 h-20 overflow-hidden transition-all duration-300 ${
-                        isActive ? "text-red-500" : "text-gray-700"
-                      }`
-                    }
-                  >
-                    {({ isActive }) => (
-                      <>
-                        {/* Top Line */}
-                        <span
-                          className={`absolute top-0 left-0 h-1 w-full bg-red-500 origin-left transition-transform duration-300 ${
-                            isActive
-                              ? "scale-x-100"
-                              : "scale-x-0 group-hover:scale-x-100"
-                          }`}
-                        />
-
-                        {/* Icon */}
-                        <Icon
-                          size={24}
-                          className={`absolute top-3 transition-all duration-300 ${
-                            isActive
-                              ? "opacity-100 translate-y-0 text-red-500"
-                              : "opacity-0 -translate-y-8 text-red-500 group-hover:opacity-100 group-hover:translate-y-0"
-                          }`}
-                        />
-
-                        {/* Text */}
-                        <span
-                          className={`text-sm lg:text-base font-medium transition-all duration-300 ${
-                            isActive
-                              ? "translate-y-6 opacity-0"
-                              : "group-hover:translate-y-6 group-hover:opacity-0"
-                          }`}
-                        >
-                          {item.name}
-                        </span>
-                      </>
-                    )}
-                  </NavLink>
-                </li>
+                <NavLink
+                  key={item.name}
+                  to={item.to}
+                  className={({ isActive }) =>
+                    `flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 ${
+                      isActive
+                        ? "bg-white text-red-600 shadow-sm shadow-slate-200 scale-100 font-bold"
+                        : "text-slate-600 hover:text-slate-900 hover:bg-white/60"
+                    }`
+                  }
+                >
+                  <Icon className="w-4 h-4 shrink-0" />
+                  <span>{item.name}</span>
+                </NavLink>
               );
             })}
-          </ul>
+          </nav>
 
-          <div className="gap-2 flex items-center lg:gap-3">
-            <a
-              href="https://www.instagram.com/firozmdtabish/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="h-11 w-11 justify-center rounded-full border border-pink-200 bg-pink-50 group flex items-center transition-all duration-300 hover:-translate-y-1 hover:bg-pink-500 hover:shadow-lg"
-            >
-              <FaInstagram
-                className="text-pink-500 group-hover:text-white"
-                size={20}
-              />
-            </a>
+          {/* Right Area: Status Badge & Socials */}
+          <div className="gap-3 hidden md:flex items-center">
+            {/* Status indicator */}
+            
 
-            <a
-              href="https://www.linkedin.com/in/tabish-firoz/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="h-11 w-11 justify-center rounded-full border border-blue-200 bg-blue-50 group flex items-center transition-all duration-300 hover:-translate-y-1 hover:bg-blue-600 hover:shadow-lg"
-            >
-              <FaLinkedinIn
-                className="text-blue-600 group-hover:text-white"
-                size={20}
-              />
-            </a>
+            {/* Social Icons */}
+            <div className="gap-1.5 border-l border-slate-200 flex items-center pl-2">
+              <a
+                href="https://github.com/firozmdtabish04"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-xl bg-slate-100 text-slate-700 justify-center shadow-xs hover:bg-slate-900 hover:text-white flex items-center transition-all duration-200"
+                title="GitHub"
+              >
+                <FaGithub className="text-base" />
+              </a>
 
-            <a
-              href="https://github.com/firozmdtabish04"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="h-11 w-11 justify-center rounded-full border border-gray-300 bg-gray-100 group flex items-center transition-all duration-300 hover:-translate-y-1 hover:bg-gray-900 hover:shadow-lg"
-            >
-              <FaGithub
-                className="text-gray-700 group-hover:text-white"
-                size={20}
-              />
-            </a>
+              <a
+                href="https://www.linkedin.com/in/tabish-firoz/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 justify-center shadow-xs hover:bg-blue-600 hover:text-white flex items-center transition-all duration-200"
+                title="LinkedIn"
+              >
+                <FaLinkedinIn className="text-base" />
+              </a>
+
+              <a
+                href="https://www.instagram.com/firozmdtabish/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-xl bg-pink-50 text-pink-600 justify-center shadow-xs hover:bg-pink-600 hover:text-white flex items-center transition-all duration-200"
+                title="Instagram"
+              >
+                <FaInstagram className="text-base" />
+              </a>
+            </div>
           </div>
-        </div>
 
-        {/* Mobile */}
-        <div className="px-4 justify-between bg-white rounded-2xl shadow-md h-16 md:hidden flex items-center">
-          <Link to="/" className="text-2xl font-extrabold text-red-500">
-            TaFi
-          </Link>
-
+          {/* Mobile Menu Toggle Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 rounded-lg hover:bg-red-100 transition"
+            className="p-2 rounded-xl text-slate-700 border border-slate-200 lg:hidden hover:bg-red-50 hover:text-red-500 transition-all duration-200 cursor-pointer"
+            aria-label="Toggle Navigation Menu"
           >
-            {isOpen ? (
-              <X
-                size={28}
-                className="text-red-500 rotate-180 transition-transform duration-300"
-              />
-            ) : (
-              <Menu
-                size={28}
-                className="text-red-500 hover:rotate-90 transition-transform duration-300"
-              />
-            )}
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
-        {/* Mobile Dropdown */}
+        {/* Mobile Dropdown Menu Component */}
         <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
-    </nav>
+    </header>
   );
 }
 
