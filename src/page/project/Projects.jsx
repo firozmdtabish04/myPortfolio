@@ -82,6 +82,43 @@ const projectsData = [
     },
   },
   {
+    id: "dsa-visualizer",
+    title: "DSAptix — DSA Visualizer",
+    tagline: "Interactive Data Structures & Algorithm Learning Platform",
+    category: "Education & Tools",
+    badge: "Full Stack",
+    badgeColor: "bg-emerald-600 text-white",
+    description:
+      "Interactive DSA learning platform featuring step-by-step algorithm visualizations, coding interview problems, complexity analysis, and company-based filtering.",
+    longDescription:
+      "A full-stack educational platform designed to help students understand data structures and algorithms through synchronized code highlighting, interactive animations, and interview-focused practice. Built with React and TypeScript, supported by an Express REST API and MongoDB persistence.",
+    highlights: [
+      "Interactive algorithm visualizations with step controls",
+      "336 coding problems and 300+ conceptual interview questions",
+      "Search and filter by topic, difficulty, company, and pattern",
+      "Code solutions, complexity analysis, and learning progress tracking",
+    ],
+    gradient: "from-emerald-700 via-teal-700 to-green-600",
+    icon: <Code2 className="text-3xl text-white" />,
+    github: "https://github.com/firozmdtabish04/DSA-Visualizer",
+    demo: "https://dsaptix.vercel.app/",
+    isLive: false,
+    tech: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS",
+    ],
+    architecture: {
+      frontend: "React, TypeScript, Tailwind CSS",
+      backend: "Node.js, Express.js, REST API",
+      database: "MongoDB",
+      deployment: "To be configured",
+    },
+  },
+  {
     id: "hospital-management",
     title: "Hospital Management System",
     tagline: "Clinical Records & Doctor Appointment Portal",
@@ -493,7 +530,9 @@ const iconMap = {
   "NASA API": <span className="text-red-500 font-extrabold text-xs">NASA</span>,
   "Weather API": <span className="text-cyan-500 font-bold text-xs">API</span>,
   API: <span className="text-purple-500 font-bold text-xs">API</span>,
-  "Responsive Design": <span className="text-amber-500 font-bold text-xs">UI</span>,
+  "Responsive Design": (
+    <span className="text-amber-500 font-bold text-xs">UI</span>
+  ),
 };
 
 // Available categories
@@ -561,7 +600,7 @@ function Projects() {
   const stats = useMemo(() => {
     const total = projectsData.length;
     const fullStackCount = projectsData.filter(
-      (p) => p.category === "Full Stack" || p.category === "Enterprise"
+      (p) => p.category === "Full Stack" || p.category === "Enterprise",
     ).length;
     const liveDeployments = projectsData.filter((p) => p.isLive).length;
     return { total, fullStackCount, liveDeployments };
@@ -573,55 +612,58 @@ function Projects() {
   };
 
   return (
-    <section className="relative min-h-screen py-14 sm:py-20 bg-gradient-to-br from-slate-50 via-white to-red-50/40 bg-mesh-pattern">
+    <section className="py-14 min-h-screen bg-gradient-to-br bg-mesh-pattern relative sm:py-20 from-slate-50 via-white to-red-50/40">
       {/* Decorative ambient background glows */}
-      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-3/4 max-w-4xl h-80 bg-red-400/10 blur-[130px] rounded-full pointer-events-none" />
-      <div className="absolute top-96 right-10 w-80 h-80 bg-orange-400/10 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-rose-400/10 blur-[140px] rounded-full pointer-events-none" />
+      <div className="top-10 w-3/4 max-w-4xl h-80 bg-red-400/10 rounded-full absolute left-1/2 -translate-x-1/2 blur-[130px] pointer-events-none" />
+      <div className="top-96 w-80 h-80 bg-orange-400/10 rounded-full absolute right-10 blur-[120px] pointer-events-none" />
+      <div className="bottom-20 w-96 h-96 bg-rose-400/10 rounded-full absolute left-10 blur-[140px] pointer-events-none" />
 
-      <div className="relative px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
+      <div className="px-4 max-w-7xl mx-auto relative sm:px-6 lg:px-12">
         {/* ================= HEADER SECTION ================= */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-100/90 border border-red-200/80 text-red-600 text-xs sm:text-sm font-semibold tracking-wider uppercase shadow-sm">
-            <Sparkles className="w-4 h-4 text-red-500 animate-spin" style={{ animationDuration: "6s" }} />
+        <div className="mb-12 text-center max-w-3xl mx-auto sm:mb-16">
+          <div className="gap-2 px-4 py-1.5 rounded-full bg-red-100/90 border border-red-200/80 text-red-600 text-xs font-semibold shadow-sm inline-flex items-center sm:text-sm tracking-wider uppercase">
+            <Sparkles
+              className="w-4 h-4 text-red-500 animate-spin"
+              style={{ animationDuration: "6s" }}
+            />
             <span>Interactive Engineering Portfolio</span>
           </div>
 
-          <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight">
+          <h1 className="mt-5 text-4xl font-black text-slate-900 sm:text-5xl lg:text-6xl tracking-tight leading-tight">
             Featured <span className="shimmer-text">Projects & Systems</span>
           </h1>
 
-          <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-4 text-base text-slate-600 max-w-2xl mx-auto sm:text-lg leading-relaxed">
             Production-grade full-stack architectures, enterprise solutions, and
             interactive web platforms engineered with Spring Boot, React, Redis,
             and scalable modern cloud tools.
           </p>
 
           {/* Quick Stats Pill Strip */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 mt-8 max-w-xl mx-auto">
-            <div className="glass-panel p-3.5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col items-center hover:border-red-300 transition-all">
-              <span className="text-2xl sm:text-3xl font-black text-red-600">
+          <div className="grid grid-cols-2 gap-3 mt-8 max-w-xl mx-auto sm:grid-cols-3 sm:gap-4">
+            <div className="flex-col p-3.5 rounded-2xl border border-slate-200/80 shadow-sm glass-panel flex items-center hover:border-red-300 transition-all">
+              <span className="text-2xl font-black text-red-600 sm:text-3xl">
                 {stats.total}+
               </span>
-              <span className="text-xs font-semibold text-slate-500 uppercase tracking-wide mt-0.5">
+              <span className="mt-0.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">
                 Total Projects
               </span>
             </div>
 
-            <div className="glass-panel p-3.5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col items-center hover:border-red-300 transition-all">
-              <span className="text-2xl sm:text-3xl font-black text-slate-900">
+            <div className="flex-col p-3.5 rounded-2xl border border-slate-200/80 shadow-sm glass-panel flex items-center hover:border-red-300 transition-all">
+              <span className="text-2xl font-black text-slate-900 sm:text-3xl">
                 {stats.liveDeployments}
               </span>
-              <span className="text-xs font-semibold text-slate-500 uppercase tracking-wide mt-0.5">
+              <span className="mt-0.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">
                 Live Production
               </span>
             </div>
 
-            <div className="col-span-2 sm:col-span-1 glass-panel p-3.5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col items-center hover:border-red-300 transition-all">
-              <span className="text-2xl sm:text-3xl font-black text-red-500">
+            <div className="col-span-2 flex-col p-3.5 rounded-2xl border border-slate-200/80 shadow-sm sm:col-span-1 glass-panel flex items-center hover:border-red-300 transition-all">
+              <span className="text-2xl font-black text-red-500 sm:text-3xl">
                 {stats.fullStackCount}
               </span>
-              <span className="text-xs font-semibold text-slate-500 uppercase tracking-wide mt-0.5">
+              <span className="mt-0.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">
                 Full-Stack / CRM
               </span>
             </div>
@@ -629,22 +671,22 @@ function Projects() {
         </div>
 
         {/* ================= CONTROLS & FILTER TOOLBAR ================= */}
-        <div className="glass-panel p-4 sm:p-6 rounded-3xl border border-slate-200 shadow-xl mb-10 transition-all duration-300">
-          <div className="flex flex-col lg:flex-row gap-4 items-stretch lg:items-center justify-between">
+        <div className="p-4 mb-10 rounded-3xl border border-slate-200 shadow-xl glass-panel sm:p-6 transition-all duration-300">
+          <div className="flex-col gap-4 justify-between flex lg:flex-row items-stretch lg:items-center">
             {/* Search Input */}
-            <div className="relative flex-1">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5 pointer-events-none" />
+            <div className="flex-1 relative">
+              <Search className="top-1/2 text-slate-400 w-5 h-5 absolute left-4 -translate-y-1/2 pointer-events-none" />
               <input
                 type="text"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Search projects by name, description, or stack (e.g., Redis, NASA, Spring)..."
-                className="w-full pl-11 pr-10 py-3 rounded-2xl bg-slate-50/80 border border-slate-200 text-slate-800 placeholder-slate-400 text-sm sm:text-base font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-red-400/50 focus:border-red-400 transition-all shadow-inner"
+                className="py-3 w-full rounded-2xl bg-slate-50/80 border border-slate-200 text-slate-800 text-sm font-medium shadow-inner pl-11 pr-10 placeholder-slate-400 sm:text-base focus:bg-white focus:outline-none focus:ring-2 focus:ring-red-400/50 focus:border-red-400 transition-all"
               />
               {searchTerm && (
                 <button
                   onClick={() => setSearchTerm("")}
-                  className="absolute right-3.5 top-1/2 -translate-y-1/2 p-1 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-200 transition"
+                  className="p-1 top-1/2 rounded-full text-slate-400 absolute right-3.5 -translate-y-1/2 hover:text-slate-600 hover:bg-slate-200 transition"
                   title="Clear search"
                 >
                   <X className="w-4 h-4" />
@@ -653,8 +695,8 @@ function Projects() {
             </div>
 
             {/* View Mode Toggle & Status Indicator */}
-            <div className="flex items-center justify-between sm:justify-end gap-3">
-              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100/90 text-xs font-semibold text-slate-600">
+            <div className="gap-3 justify-between flex items-center sm:justify-end">
+              <div className="gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100/90 text-xs font-semibold text-slate-600 flex items-center">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 <span>
                   {filteredProjects.length}{" "}
@@ -663,7 +705,7 @@ function Projects() {
               </div>
 
               {/* View switch buttons */}
-              <div className="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200">
+              <div className="p-1 bg-slate-100 rounded-xl border border-slate-200 flex items-center">
                 <button
                   onClick={() => setViewMode("grid")}
                   className={`p-2 rounded-lg transition-all ${
@@ -691,7 +733,7 @@ function Projects() {
           </div>
 
           {/* Category Tabs */}
-          <div className="mt-5 pt-5 border-t border-slate-200/70 flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+          <div className="mt-5 pt-5 gap-2 pb-2 border-t border-slate-200/70 overflow-x-auto flex items-center scrollbar-none">
             <Filter className="w-4 h-4 text-slate-400 shrink-0 mr-1" />
             {categories.map((category) => {
               const count =
@@ -713,7 +755,9 @@ function Projects() {
                   <span>{category}</span>
                   <span
                     className={`px-1.5 py-0.2 rounded-full text-[10px] ${
-                      isActive ? "bg-white/20 text-white" : "bg-slate-200 text-slate-700"
+                      isActive
+                        ? "bg-white/20 text-white"
+                        : "bg-slate-200 text-slate-700"
                     }`}
                   >
                     {count}
@@ -724,7 +768,7 @@ function Projects() {
           </div>
 
           {/* Quick Technology Filter Pills */}
-          <div className="mt-3 flex items-center gap-1.5 flex-wrap">
+          <div className="flex-wrap mt-3 gap-1.5 flex items-center">
             <span className="text-xs font-medium text-slate-400 mr-1">
               Stack filter:
             </span>
@@ -749,15 +793,17 @@ function Projects() {
 
         {/* ================= NO RESULTS FALLBACK ================= */}
         {filteredProjects.length === 0 && (
-          <div className="text-center py-20 bg-white/80 rounded-3xl border border-slate-200 p-8 shadow-sm">
-            <div className="w-16 h-16 rounded-2xl bg-red-50 text-red-500 mx-auto flex items-center justify-center text-2xl mb-4">
+          <div className="py-20 p-8 text-center bg-white/80 rounded-3xl border border-slate-200 shadow-sm">
+            <div className="mb-4 w-16 h-16 rounded-2xl bg-red-50 text-red-500 mx-auto justify-center text-2xl flex items-center">
               <Search className="w-8 h-8" />
             </div>
             <h3 className="text-xl font-bold text-slate-800">
               No matching projects found
             </h3>
             <p className="mt-2 text-slate-500 text-sm max-w-md mx-auto">
-              We couldn't find any projects matching "{searchTerm}" under the selected filters. Try clearing your search query or choosing another category.
+              We couldn't find any projects matching "{searchTerm}" under the
+              selected filters. Try clearing your search query or choosing
+              another category.
             </p>
             <button
               onClick={() => {
@@ -1080,7 +1126,9 @@ function Projects() {
               <p className="text-slate-400 mt-1">
                 On branch main • Everything up to date
               </p>
-              <p className="text-emerald-400 mt-2">$ npx tabish-firoz --skills</p>
+              <p className="text-emerald-400 mt-2">
+                $ npx tabish-firoz --skills
+              </p>
               <p className="text-slate-300 mt-1">
                 Java 17, Spring Boot, React, MySQL, Redis, Docker, Tailwind
               </p>
@@ -1149,7 +1197,9 @@ function Projects() {
                   <div className="flex items-start gap-2.5">
                     <Laptop className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-bold text-slate-800">Frontend:</span>
+                      <span className="font-bold text-slate-800">
+                        Frontend:
+                      </span>
                       <p className="text-slate-600">
                         {activeModalProject.architecture.frontend}
                       </p>
@@ -1167,7 +1217,9 @@ function Projects() {
                   <div className="flex items-start gap-2.5">
                     <Database className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-bold text-slate-800">Database & Cache:</span>
+                      <span className="font-bold text-slate-800">
+                        Database & Cache:
+                      </span>
                       <p className="text-slate-600">
                         {activeModalProject.architecture.database}
                       </p>
@@ -1176,7 +1228,9 @@ function Projects() {
                   <div className="flex items-start gap-2.5">
                     <Globe className="w-4 h-4 text-purple-500 shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-bold text-slate-800">Deployment:</span>
+                      <span className="font-bold text-slate-800">
+                        Deployment:
+                      </span>
                       <p className="text-slate-600">
                         {activeModalProject.architecture.deployment}
                       </p>
