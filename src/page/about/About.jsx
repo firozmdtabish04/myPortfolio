@@ -17,7 +17,7 @@ import Profile from "../../assets/profile.jpg";
 
 function About() {
   const stats = [
-    { value: "9.3", label: "Current CGPA", sub: "Centurion University" },
+    { value: "9.4", label: "Current CGPA", sub: "Centurion University" },
     { value: "14+", label: "Engineered Projects", sub: "Full Stack & Cloud" },
     { value: "401+", label: "DSA Problems", sub: "Top 10% on GfG" },
     { value: "858 Pg", label: "Published Book", sub: "Author: Core Java" },
@@ -28,9 +28,9 @@ function About() {
       year: "2023 – 2027",
       title: "B.Tech in Computer Science Engineering",
       institution: "Centurion University of Technology and Management",
-      badge: "CGPA 9.3 / 10",
+      badge: "CGPA 9.4 / 10",
       icon: <FaGraduationCap className="text-red-500 text-xl" />,
-      desc: "Specializing in Software Engineering, Data Structures & Algorithms, Database Management Systems, Linux OS, and Cloud Computing. Maintaining consistent academic distinction with a 9.3 CGPA.",
+      desc: "Specializing in Software Engineering, Data Structures & Algorithms, Database Management Systems, Linux OS, and Cloud Computing. Maintaining consistent academic distinction with a 9.4 CGPA.",
     },
     {
       year: "2024 – Present",
@@ -77,37 +77,37 @@ function About() {
   ];
 
   return (
-    <section className="relative min-h-screen py-14 sm:py-20 bg-gradient-to-br from-slate-50 via-white to-red-50/40 bg-mesh-pattern">
+    <section className="py-14 min-h-screen bg-gradient-to-br bg-mesh-pattern relative sm:py-20 from-slate-50 via-white to-red-50/40">
       {/* Ambient background glows */}
-      <div className="absolute top-10 left-1/3 w-80 h-80 bg-red-400/10 rounded-full blur-[130px] pointer-events-none" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-400/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="top-10 w-80 h-80 bg-red-400/10 rounded-full absolute left-1/3 blur-[130px] pointer-events-none" />
+      <div className="bottom-20 w-96 h-96 bg-orange-400/10 rounded-full absolute right-10 blur-[140px] pointer-events-none" />
 
-      <div className="relative px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
+      <div className="px-4 max-w-7xl mx-auto relative sm:px-6 lg:px-12">
         {/* ================= HEADER ================= */}
-        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-100/90 border border-red-200/80 text-red-600 text-xs sm:text-sm font-semibold tracking-wider uppercase shadow-sm">
+        <div className="mb-14 text-center max-w-3xl mx-auto sm:mb-20">
+          <div className="gap-2 px-4 py-1.5 rounded-full bg-red-100/90 border border-red-200/80 text-red-600 text-xs font-semibold shadow-sm inline-flex items-center sm:text-sm tracking-wider uppercase">
             <User className="w-4 h-4 text-red-500" />
             <span>Profile & Professional Background</span>
           </div>
 
-          <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight">
+          <h1 className="mt-5 text-4xl font-black text-slate-900 sm:text-5xl lg:text-6xl tracking-tight leading-tight">
             Engineering with <span className="shimmer-text">Passion & Precision</span>
           </h1>
 
-          <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-4 text-base text-slate-600 max-w-2xl mx-auto sm:text-lg leading-relaxed">
             A dedicated Computer Science engineer with a track record in full-stack
             software development, published literature, and competitive algorithmic problem solving.
           </p>
         </div>
 
         {/* ================= BIO SECTION ================= */}
-        <div className="grid gap-12 lg:grid-cols-12 items-center mb-20">
+        <div className="grid gap-12 mb-20 lg:grid-cols-12 items-center">
           {/* Left Avatar Column */}
-          <div className="lg:col-span-5 flex justify-center px-4">
+          <div className="px-4 justify-center lg:col-span-5 flex">
             <div className="relative">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-red-400 via-rose-300 to-amber-300 blur-2xl opacity-40 scale-110" />
+              <div className="rounded-full bg-gradient-to-tr opacity-40 absolute inset-0 from-red-400 via-rose-300 to-amber-300 blur-2xl scale-110" />
 
-              <div className="relative w-52 h-52 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-[6px] sm:border-[8px] border-white shadow-2xl bg-white group">
+              <div className="w-52 h-52 rounded-full overflow-hidden border-[6px] border-white shadow-2xl bg-white relative sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 sm:border-[8px] group">
                 <img
                   src={Profile}
                   alt="Tabish Firoz"
@@ -116,11 +116,11 @@ function About() {
               </div>
 
               {/* Status pill overlay */}
-              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 glass-panel px-4 sm:px-5 py-1.5 sm:py-2.5 rounded-2xl border border-slate-200 shadow-xl text-center max-w-[90vw] whitespace-nowrap">
-                <p className="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+              <div className="px-4 py-1.5 rounded-2xl border border-slate-200 shadow-xl text-center max-w-[90vw] absolute -bottom-2 left-1/2 -translate-x-1/2 glass-panel sm:px-5 sm:py-2.5 whitespace-nowrap">
+                <p className="text-[9px] font-bold text-slate-400 sm:text-[10px] uppercase tracking-widest">
                   Status
                 </p>
-                <p className="text-[11px] sm:text-xs font-black text-red-600">
+                <p className="text-[11px] font-black text-red-600 sm:text-xs">
                   Full Stack Engineer • Centurion '27
                 </p>
               </div>
@@ -145,27 +145,27 @@ function About() {
             </p>
 
             {/* Quick Stats Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 mt-8">
+            <div className="grid grid-cols-2 gap-2.5 mt-8 sm:grid-cols-4 sm:gap-4">
               {stats.map((item) => (
                 <div
                   key={item.label}
-                  className="glass-panel p-3 sm:p-4 rounded-2xl border border-slate-200/90 shadow-sm text-center hover:border-red-300 hover:-translate-y-1 transition-all"
+                  className="p-3 rounded-2xl border border-slate-200/90 shadow-sm text-center glass-panel sm:p-4 hover:border-red-300 hover:-translate-y-1 transition-all"
                 >
-                  <span className="text-xl sm:text-3xl font-black text-red-600 block">
+                  <span className="text-xl font-black text-red-600 sm:text-3xl block">
                     {item.value}
                   </span>
-                  <p className="text-[11px] sm:text-xs font-bold text-slate-800 mt-1">
+                  <p className="mt-1 text-[11px] font-bold text-slate-800 sm:text-xs">
                     {item.label}
                   </p>
-                  <p className="text-[9px] sm:text-[10px] text-slate-500">{item.sub}</p>
+                  <p className="text-[9px] text-slate-500 sm:text-[10px]">{item.sub}</p>
                 </div>
               ))}
             </div>
 
-            <div className="mt-8 flex items-center gap-4">
+            <div className="mt-8 gap-4 flex items-center">
               <Link
                 to="/projects"
-                className="px-6 py-3.5 rounded-2xl bg-red-500 text-white font-bold text-sm shadow-md shadow-red-500/20 hover:bg-red-600 transition flex items-center gap-2"
+                className="px-6 py-3.5 gap-2 rounded-2xl bg-red-500 text-white font-bold text-sm shadow-md shadow-red-500/20 hover:bg-red-600 transition flex items-center"
               >
                 <span>View Projects</span>
                 <FaArrowRight className="text-xs" />
@@ -183,27 +183,27 @@ function About() {
 
         {/* ================= EXPERIENCE & EDUCATION TIMELINE ================= */}
         <div className="mb-20">
-          <div className="text-center max-w-2xl mx-auto mb-12">
+          <div className="mb-12 text-center max-w-2xl mx-auto">
             <span className="px-3.5 py-1.5 rounded-full bg-red-100 text-red-600 text-xs font-bold uppercase tracking-wider">
               Journey
             </span>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+            <h2 className="mt-3 text-3xl font-black text-slate-900 sm:text-4xl tracking-tight">
               Education & Professional Experience
             </h2>
           </div>
 
-          <div className="space-y-6 max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-6">
             {timeline.map((item, idx) => (
               <div
                 key={idx}
-                className="glass-panel p-7 sm:p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-red-300 transition-all duration-300 flex flex-col sm:flex-row items-start gap-6"
+                className="flex-col p-7 gap-6 rounded-3xl border border-slate-200 shadow-sm glass-panel sm:p-8 hover:shadow-xl hover:border-red-300 transition-all duration-300 flex sm:flex-row items-start"
               >
-                <div className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center shrink-0 shadow-xs">
+                <div className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 justify-center shadow-xs flex items-center shrink-0">
                   {item.icon}
                 </div>
 
                 <div className="flex-1">
-                  <div className="flex flex-wrap items-center justify-between gap-2">
+                  <div className="flex-wrap gap-2 justify-between flex items-center">
                     <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
                       {item.year}
                     </span>
@@ -216,7 +216,7 @@ function About() {
                     {item.title}
                   </h3>
 
-                  <p className="text-red-500 font-semibold text-sm mt-0.5">
+                  <p className="mt-0.5 text-red-500 font-semibold text-sm">
                     {item.institution}
                   </p>
 
@@ -231,23 +231,23 @@ function About() {
 
         {/* ================= CORE PILLARS ================= */}
         <div>
-          <div className="text-center max-w-2xl mx-auto mb-12">
+          <div className="mb-12 text-center max-w-2xl mx-auto">
             <span className="px-3.5 py-1.5 rounded-full bg-red-100 text-red-600 text-xs font-bold uppercase tracking-wider">
               Specializations
             </span>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+            <h2 className="mt-3 text-3xl font-black text-slate-900 sm:text-4xl tracking-tight">
               Primary Engineering Focus
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid gap-6 md:grid-cols-3 sm:gap-8">
             {competencies.map((comp) => (
               <div
                 key={comp.title}
-                className="glass-panel p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-2xl hover:border-red-300 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group"
+                className="flex-col p-8 rounded-3xl border border-slate-200 shadow-sm justify-between glass-panel hover:shadow-2xl hover:border-red-300 hover:-translate-y-2 transition-all duration-300 flex group"
               >
                 <div>
-                  <div className="w-16 h-16 rounded-2xl bg-red-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <div className="mb-6 w-16 h-16 rounded-2xl bg-red-50 justify-center flex items-center group-hover:scale-110 transition-transform">
                     {comp.icon}
                   </div>
 
@@ -260,7 +260,7 @@ function About() {
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center gap-1.5 text-xs font-bold text-red-500">
+                <div className="mt-6 pt-4 gap-1.5 border-t border-slate-100 text-xs font-bold text-red-500 flex items-center">
                   <FaCheckCircle />
                   <span>Production Competency</span>
                 </div>

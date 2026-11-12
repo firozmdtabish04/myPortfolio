@@ -58,7 +58,7 @@ function Home() {
 
   const highlights = [
     {
-      value: "9.3",
+      value: "9.4",
       label: "B.Tech CGPA",
       sub: "Centurion University",
       icon: <Award className="w-5 h-5 text-red-500" />,
@@ -279,7 +279,7 @@ function Home() {
                     CGPA
                   </p>
                   <p className="text-[11px] font-black text-red-600 sm:text-xs">
-                    9.3 / 10
+                    9. / 10
                   </p>
                 </div>
               </div>

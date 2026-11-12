@@ -4,7 +4,7 @@ export const PORTFOLIO_INFO = {
   title: "Full Stack Engineer & Core Java Specialist",
   college: "Centurion University of Technology and Management (CUTM)",
   degree: "B.Tech in Computer Science and Engineering (2023 - 2027)",
-  cgpa: "9.3 / 10",
+  cgpa: "9.4 / 10",
   location: "Jehanabad, Bihar, India",
   email: "mdtabishfiroz04@gmail.com",
   phone: "+91 81029 46894",
