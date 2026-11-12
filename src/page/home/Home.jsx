@@ -279,7 +279,7 @@ function Home() {
                     CGPA
                   </p>
                   <p className="text-[11px] font-black text-red-600 sm:text-xs">
-                    9. / 10
+                    9.4 / 10
                   </p>
                 </div>
               </div>
