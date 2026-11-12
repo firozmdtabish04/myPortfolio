@@ -64,7 +64,7 @@ function Home() {
       icon: <Award className="w-5 h-5 text-red-500" />,
     },
     {
-      value: "14+",
+      value: "17+",
       label: "Engineered Projects",
       sub: "Full-Stack & Cloud",
       icon: <Layers className="w-5 h-5 text-blue-500" />,
@@ -140,7 +140,7 @@ function Home() {
               Computer Science Engineering student passionate about engineering
               high-throughput web applications with{" "}
               <strong>Java, Spring Boot, React, and MySQL</strong>. From
-              NASA-integrated disaster response systems to enterprise CRMs, I
+              NASA-integrated disaster response systems and 3D robotics simulators to enterprise CRMs and EV ecosystems, I
               build software that balances scalability with pristine user
               experience.
             </p>

@@ -52,6 +52,27 @@ export const PORTFOLIO_INFO = {
       link: "/projects",
     },
     {
+      title: "AETHER-VISION — AI Robotics Simulator",
+      tag: "Robotics & AI / 3D",
+      desc: "Browser-based 3D robotics arena simulator with real-time HSV computer vision, PID closed-loop motion control, obstacle braking, and C++/ESP32 firmware generation.",
+      demo: "https://kanungo-naresh.vercel.app/",
+      link: "/projects",
+    },
+    {
+      title: "EvHub — Next-Gen EV Ecosystem",
+      tag: "React 19 / Modern Web",
+      desc: "Electric vehicle and smart charging infrastructure platform with Three.js 3D models, Framer Motion, and modern Tailwind CSS v4.",
+      demo: "https://evhub-19.vercel.app/",
+      link: "/projects",
+    },
+    {
+      title: "DSAptix / AlgoVista — DSA Visualizer",
+      tag: "Education & Tools",
+      desc: "Interactive DSA learning platform featuring step-by-step algorithm visualizations, interview problems, and complexity analysis.",
+      demo: "https://dsaptix.vercel.app/",
+      link: "/projects",
+    },
+    {
       title: "Hospital Management System",
       tag: "Enterprise / Healthcare",
       desc: "Clinical workflow portal with digitized EMR, doctor appointment allocation, role-based auth (Admin, Doctor, Patient), and optimized MySQL relational schema.",
@@ -136,13 +157,16 @@ export function getBotResponse(inputMessage) {
     query.includes("work") ||
     query.includes("resqueos") ||
     query.includes("disaster") ||
+    query.includes("robot") ||
+    query.includes("aether") ||
+    query.includes("evhub") ||
     query.includes("hospital") ||
     query.includes("built")
   ) {
     return {
-      text: `Tabish has engineered **14+ production-ready projects** spanning full-stack, distributed caching, and microservices.\n\n🔥 **Featured Highlights:**\n\n1. **Smart Disaster Response Platform (ResqueOS)**\n   • Live incident tracking & NASA telemetry (EONET/NeoWs)\n   • High-speed Redis caching & Spring Boot microservices\n   • [Live Demo: resqueos.vercel.app](https://resqueos.vercel.app/login)\n\n2. **Hospital Management System**\n   • Digital Electronic Medical Records (EMR) & doctor scheduling\n   • Role-based authentication (Admin, Doctor, Patient) & MySQL schema\n\n3. **Lyient CRM Engineering**\n   • Enterprise customer & employee lifecycle portal with JWT auth\n\nCheck out the full interactive projects gallery!`,
+      text: `Tabish has engineered **17+ production-ready projects** spanning full-stack, distributed caching, 3D simulation, and microservices.\n\n🔥 **Featured Highlights:**\n\n1. **Smart Disaster Response Platform (ResqueOS)**\n   • Live incident tracking & NASA telemetry (EONET/NeoWs)\n   • High-speed Redis caching & Spring Boot microservices\n   • [Live Demo: resqueos.vercel.app](https://resqueos.vercel.app/login)\n\n2. **AETHER-VISION — AI Robotics Simulator**\n   • Browser-based 3D robotics arena with Three.js & real-time HSV vision\n   • PID closed-loop tracking & C++/ESP32 firmware generator\n   • [Live Demo: kanungo-naresh.vercel.app](https://kanungo-naresh.vercel.app/)\n\n3. **EvHub — Next-Gen EV Ecosystem**\n   • React 19, Three.js 3D models, Framer Motion, and Tailwind CSS v4\n   • Smart EV charging infrastructure & station locator\n   • [Live Demo: evhub-19.vercel.app](https://evhub-19.vercel.app/)\n\n4. **DSAptix / AlgoVista — Interactive DSA Visualizer**\n   • Synchronized code highlighting, step controls, and 336+ practice problems\n   • [Live Demo: dsaptix.vercel.app](https://dsaptix.vercel.app/)\n\nCheck out the full interactive projects gallery!`,
       links: [
-        { label: "View All 14+ Projects", to: "/projects" },
+        { label: "View All 17+ Projects", to: "/projects" },
         { label: "Visit ResqueOS Live Demo", href: "https://resqueos.vercel.app/login" },
       ],
       suggestions: ["💻 Core Skills", "📄 Download Resume", "📬 Contact Details"],

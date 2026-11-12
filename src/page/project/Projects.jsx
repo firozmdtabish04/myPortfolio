@@ -19,6 +19,8 @@ import {
   Database,
   Cpu,
   ShieldCheck,
+  Bot,
+  Car,
 } from "lucide-react";
 import {
   SiSpringboot,
@@ -31,6 +33,9 @@ import {
   SiExpress,
   SiAngular,
   SiJavascript,
+  SiThreedotjs,
+  SiTypescript,
+  SiFramer,
 } from "react-icons/si";
 import {
   FaGithub,
@@ -82,8 +87,68 @@ const projectsData = [
     },
   },
   {
+    id: "aether-vision",
+    title: "AETHER-VISION — AI Robotics Simulator",
+    tagline: "3D Arena, Computer Vision & PID Target Tracking",
+    category: "AI & Tools",
+    badge: "Robotics / 3D",
+    badgeColor: "bg-cyan-600 text-white",
+    description:
+      "Browser-based 3D robotics simulation arena featuring real-time HSV computer vision, PID closed-loop motion control, obstacle safety braking, and exportable embedded firmware.",
+    longDescription:
+      "An advanced robotics engineering environment developed with Three.js 3D spatial simulation and real-time vision algorithms. Features optical target chasing, line following, HSV color filtering, PID velocity controllers, ultrasonic obstacle avoidance, and generation of C++/ESP32/Arduino production firmware.",
+    highlights: [
+      "Browser-based 3D robotics arena simulator with Three.js",
+      "Real-time HSV color detection & optical target tracking",
+      "PID closed-loop velocity and trajectory stabilization",
+      "C++/ESP32 embedded firmware exporter with safety braking",
+    ],
+    gradient: "from-cyan-600 via-teal-600 to-blue-700",
+    icon: <Bot className="text-3xl text-white" />,
+    github: "https://github.com/firozmdtabish04/Robotics",
+    demo: "https://kanungo-naresh.vercel.app/",
+    isLive: true,
+    tech: ["Three.js", "React", "JavaScript", "Computer Vision", "Tailwind CSS"],
+    architecture: {
+      frontend: "React, Three.js, Canvas HSV Pipeline, Tailwind CSS",
+      backend: "Real-Time In-Browser Physics & Computer Vision Engine",
+      database: "PID State & Telemetry Logs",
+      deployment: "Vercel Production Edge",
+    },
+  },
+  {
+    id: "evhub",
+    title: "EvHub — Next-Gen EV Ecosystem",
+    tagline: "Electric Vehicle Hub & Smart Charging Infrastructure",
+    category: "Frontend / UI",
+    badge: "React 19 / 3D",
+    badgeColor: "bg-lime-600 text-white",
+    description:
+      "Modern electric vehicle and charging infrastructure platform built with React 19, Three.js 3D models, Framer Motion, and Tailwind CSS v4 with smart station locator services.",
+    longDescription:
+      "A next-generation electric mobility web application built to streamline charging infrastructure, home station installations, and corporate fleet services. Engineered on React 19 with Three.js (@react-three/fiber) interactive 3D vehicle models, smooth Framer Motion micro-interactions, responsive station finder, and user onboarding flows.",
+    highlights: [
+      "Interactive 3D vehicle & charger showcase powered by Three.js",
+      "Built with React 19, Vite 8, and modern Tailwind CSS v4",
+      "Smart charging station finder and residential/commercial booking",
+      "Fluid micro-animations with Framer Motion and Lucide icons",
+    ],
+    gradient: "from-emerald-600 via-lime-600 to-teal-700",
+    icon: <Car className="text-3xl text-white" />,
+    github: "https://github.com/firozmdtabish04/EvHub-React-19.3.0-",
+    demo: "https://evhub-19.vercel.app/",
+    isLive: true,
+    tech: ["React", "Three.js", "Tailwind CSS", "Framer Motion", "JavaScript"],
+    architecture: {
+      frontend: "React 19, @react-three/fiber, Framer Motion, Tailwind CSS v4",
+      backend: "Client-side SPA with REST API readiness",
+      database: "EV Station Telemetry & Service Catalog",
+      deployment: "Vercel Production Deployment",
+    },
+  },
+  {
     id: "dsa-visualizer",
-    title: "DSAptix — DSA Visualizer",
+    title: "DSAptix / AlgoVista — DSA Visualizer",
     tagline: "Interactive Data Structures & Algorithm Learning Platform",
     category: "Education & Tools",
     badge: "Full Stack",
@@ -102,7 +167,7 @@ const projectsData = [
     icon: <Code2 className="text-3xl text-white" />,
     github: "https://github.com/firozmdtabish04/DSA-Visualizer",
     demo: "https://dsaptix.vercel.app/",
-    isLive: false,
+    isLive: true,
     tech: [
       "React",
       "TypeScript",
@@ -115,7 +180,7 @@ const projectsData = [
       frontend: "React, TypeScript, Tailwind CSS",
       backend: "Node.js, Express.js, REST API",
       database: "MongoDB",
-      deployment: "To be configured",
+      deployment: "Vercel Production Deployment",
     },
   },
   {
@@ -527,6 +592,10 @@ const iconMap = {
   HTML5: <FaHtml5 className="text-orange-500" />,
   CSS3: <FaCss3Alt className="text-blue-500" />,
   JavaScript: <SiJavascript className="text-yellow-400" />,
+  "Three.js": <SiThreedotjs className="text-slate-800" />,
+  TypeScript: <SiTypescript className="text-blue-500" />,
+  "Framer Motion": <SiFramer className="text-pink-500" />,
+  "Computer Vision": <Bot className="text-cyan-500 text-sm" />,
   "NASA API": <span className="text-red-500 font-extrabold text-xs">NASA</span>,
   "Weather API": <span className="text-cyan-500 font-bold text-xs">API</span>,
   API: <span className="text-purple-500 font-bold text-xs">API</span>,

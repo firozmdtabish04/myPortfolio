@@ -18,7 +18,7 @@ import Profile from "../../assets/profile.jpg";
 function About() {
   const stats = [
     { value: "9.4", label: "Current CGPA", sub: "Centurion University" },
-    { value: "14+", label: "Engineered Projects", sub: "Full Stack & Cloud" },
+    { value: "17+", label: "Engineered Projects", sub: "Full Stack & Cloud" },
     { value: "401+", label: "DSA Problems", sub: "Top 10% on GfG" },
     { value: "858 Pg", label: "Published Book", sub: "Author: Core Java" },
   ];
