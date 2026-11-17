@@ -34,6 +34,7 @@ import {
 } from "lucide-react";
 import resume from "../../assets/Tabish Firoz (Dev).pdf";
 import Profile from "../../assets/profile.jpg";
+import DSA from "../../assets/DSA [MNC].pdf";
 
 function Home() {
   const coreTech = [
@@ -159,22 +160,28 @@ function Home() {
             </div>
 
             {/* Call to Actions */}
+
             <div className="flex-col mt-10 gap-4 justify-center flex sm:flex-row lg:justify-start items-center">
+              {/* View DSA Preparation PDF */}
               <a
-                href="/src/assets/DSA [MNC].pdf"
+                href={DSA}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-4 gap-2.5 w-full rounded-2xl bg-red-500 text-white font-bold text-sm shadow-lg shadow-red-500/25 justify-center sm:w-auto sm:text-base hover:bg-red-600 hover:scale-105 transition-all duration-300 flex items-center group"
               >
-                <span>Crack Every Challenge</span>
+                <span>View Preparation Guide</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
 
+              {/* View Resume PDF */}
               <a
                 href={resume}
-                download="Tabish Firoz (Resume)"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-7 py-4 gap-2.5 w-full rounded-2xl bg-slate-900 text-white font-bold text-sm justify-center shadow-md shadow-slate-900/10 sm:w-auto sm:text-base hover:bg-black hover:scale-105 transition-all duration-300 flex items-center"
               >
                 <FaDownload />
-                <span>Download Resume</span>
+                <span>View Resume</span>
               </a>
             </div>
 
