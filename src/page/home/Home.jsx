@@ -140,9 +140,9 @@ function Home() {
               Computer Science Engineering student passionate about engineering
               high-throughput web applications with{" "}
               <strong>Java, Spring Boot, React, and MySQL</strong>. From
-              NASA-integrated disaster response systems and 3D robotics simulators to enterprise CRMs and EV ecosystems, I
-              build software that balances scalability with pristine user
-              experience.
+              NASA-integrated disaster response systems and 3D robotics
+              simulators to enterprise CRMs and EV ecosystems, I build software
+              that balances scalability with pristine user experience.
             </p>
 
             {/* Quick Tech Chips */}
@@ -160,13 +160,13 @@ function Home() {
 
             {/* Call to Actions */}
             <div className="flex-col mt-10 gap-4 justify-center flex sm:flex-row lg:justify-start items-center">
-              <Link
-                to="/projects"
+              <a
+                href="/src/assets/DSA [MNC].pdf"
                 className="px-8 py-4 gap-2.5 w-full rounded-2xl bg-red-500 text-white font-bold text-sm shadow-lg shadow-red-500/25 justify-center sm:w-auto sm:text-base hover:bg-red-600 hover:scale-105 transition-all duration-300 flex items-center group"
               >
-                <span>Explore Featured Projects</span>
+                <span>Crack Every Challenge</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </a>
 
               <a
                 href={resume}
