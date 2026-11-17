@@ -108,7 +108,13 @@ const projectsData = [
     github: "https://github.com/firozmdtabish04/Robotics",
     demo: "https://kanungo-naresh.vercel.app/",
     isLive: true,
-    tech: ["Three.js", "React", "JavaScript", "Computer Vision", "Tailwind CSS"],
+    tech: [
+      "Three.js",
+      "React",
+      "JavaScript",
+      "Computer Vision",
+      "Tailwind CSS",
+    ],
     architecture: {
       frontend: "React, Three.js, Canvas HSV Pipeline, Tailwind CSS",
       backend: "Real-Time In-Browser Physics & Computer Vision Engine",
@@ -413,7 +419,7 @@ const projectsData = [
     gradient: "from-teal-600 via-emerald-600 to-cyan-600",
     icon: <FaUserGraduate className="text-3xl text-white" />,
     github: "https://github.com/firozmdtabish04",
-    demo: "https://student-need-hub.vercel.app/focus",
+    demo: "https://student-need-hub.vercel.app",
     isLive: true,
     tech: ["React", "Tailwind CSS", "JavaScript"],
     architecture: {
