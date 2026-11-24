@@ -65,7 +65,7 @@ function Home() {
       icon: <Award className="w-5 h-5 text-red-500" />,
     },
     {
-      value: "17+",
+      value: "18+",
       label: "Engineered Projects",
       sub: "Full-Stack & Cloud",
       icon: <Layers className="w-5 h-5 text-blue-500" />,

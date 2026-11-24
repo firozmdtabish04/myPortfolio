@@ -87,6 +87,36 @@ const projectsData = [
     },
   },
   {
+    id: "notepoints",
+    title: "NotePoints — Full-Stack Engineering Hub",
+    tagline: "Curated CS Curriculum, System Design & Notes Platform",
+    category: "Full Stack",
+    badge: "Full Stack",
+    badgeColor: "bg-red-600 text-white",
+    description:
+      "Enterprise full-stack engineering notes and learning platform covering 17 core computer science subjects, algorithms, and system design, powered by Spring Boot, Redis caching, and React.",
+    longDescription:
+      "A high-throughput educational platform engineered for software engineering students and developers. Delivers structured study notes across 17 technical domains including Data Structures, System Design, Java, and modern UI engineering. Built with a Java Spring Boot RESTful backend, sub-millisecond query response powered by Redis distributed caching, and MySQL database persistence.",
+    highlights: [
+      "17 comprehensive core computer science & engineering subject modules",
+      "Sub-millisecond query performance via Redis distributed caching",
+      "Robust Java 17 & Spring Boot RESTful microservices backend",
+      "Interactive topic search, code snippets, and interview revision guides",
+    ],
+    gradient: "from-red-600 via-rose-600 to-amber-600",
+    icon: <FaBookOpen className="text-3xl text-white" />,
+    github: "https://github.com/firozmdtabish04",
+    demo: "https://notepoints.vercel.app/",
+    isLive: true,
+    tech: ["Java", "Spring Boot", "React", "Redis", "MySQL", "Tailwind CSS"],
+    architecture: {
+      frontend: "React, Tailwind CSS, Lucide Icons",
+      backend: "Spring Boot, Java 17, RESTful APIs",
+      database: "MySQL Relational DB, Redis In-Memory Cache",
+      deployment: "Vercel Production Deployment",
+    },
+  },
+  {
     id: "aether-vision",
     title: "AETHER-VISION — AI Robotics Simulator",
     tagline: "3D Arena, Computer Vision & PID Target Tracking",
